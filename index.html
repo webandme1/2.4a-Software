@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Testing</title>
+</head>
+<body>
+    <h1>JavaScript Function Testing</h1>
+
+    <!-- Add more elements here if you need to display output on the webpage -->
+
+    <script>
+        
+    // Paste your JavaScript functions here
+
+        function fizzBuzz(number) {
+    if (number % 3 === 0 && number % 5 === 0) {
+        console.log('FizzBuzz');
+    } else if (number % 3 === 0) {
+        console.log('Fizz');
+    } else if (number % 5 === 0) {
+        console.log('Buzz');
+    } else {
+        console.log('Pop');
+    }
+}
+
+// Test scenarios
+fizzBuzz(49); // Pop
+fizzBuzz(55); // Buzz
+fizzBuzz(120); // FizzBuzz
+fizzBuzz(9999); // Fizz
+   
+function averager(arr) {
+    let sum = arr.reduce((acc, cur) => acc + cur, 0);
+    return sum / arr.length;
+}
+
+// Test scenario
+const prices = [12.99, 17.75, 88.12, 111.11, 77.09, 53.45];
+let result = averager(prices);
+console.log(result); // Will print the average of the prices array
+
+function celToFah(celsius) {
+    let fahrenheit = (celsius * 9/5) + 32;
+    return parseFloat(fahrenheit.toFixed(2));
+}
+
+function celToKel(celsius) {
+    let kelvin = celsius + 273.15;
+    return parseFloat(kelvin.toFixed(2));
+}
+
+// Test scenarios
+console.log(celToFah(37.5)); // Convert 37.5°C to Fahrenheit
+console.log(celToFah(-40));  // Convert -40°C to Fahrenheit
+console.log(celToFah(0));    // Convert 0°C to Fahrenheit
+console.log(celToFah(100));  // Convert 100°C to Fahrenheit
+console.log(celToKel(173.13)); // Convert 173.13°C to Kelvin
+console.log(celToKel(-13));    // Convert -13°C to Kelvin
+   
+</script>
+    
+</body>
+</html>
